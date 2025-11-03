@@ -35,6 +35,12 @@ public class Conta {
        return saldo += quantidade;
     }
     public double saque(double quantidade){
-        return saldo -= quantidade - 5.00;
+        return saldo -= quantidade + 5.00;
+    }
+
+    public String toString() {
+        return "Dados da conta \n" +
+                "Conta: " + numeroDaConta + ", " + "Titular: " + nomeTitular +
+                ", " + "Saldo: $ " + getSaldo();
     }
 }

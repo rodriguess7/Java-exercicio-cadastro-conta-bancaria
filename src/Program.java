@@ -12,7 +12,15 @@ public class Program {
         String nomeConta = ler.nextLine();
 
         Conta cliente1 = new Conta(numeroConta,nomeConta);
-
+        System.out.println(cliente1);
+        System.out.println("Insira o valor do depósito");
+        double deposito = ler.nextDouble();
+        cliente1.deposito(deposito);
+        System.out.println("Dados atualizados! \n" + cliente1);
+        System.out.println("Insira o valor do saque");
+        double saque = ler.nextDouble();
+        cliente1.saque(saque);
+        System.out.println("Dados atualizados! \n" + cliente1);
 
         ler.close();
     }
