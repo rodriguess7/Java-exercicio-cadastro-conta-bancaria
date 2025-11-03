@@ -11,9 +11,9 @@ public class Conta {
         deposito(primeiroDeposito);
     }
 
-    public Conta(String nomeTitular, int numeroDaConta) {
-        this.nomeTitular = nomeTitular;
+    public Conta(int numeroDaConta, String nomeTitular ) {
         this.numeroDaConta = numeroDaConta;
+        this.nomeTitular = nomeTitular;
     }
 
     public int getNumeroDaConta() {
