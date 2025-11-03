@@ -4,16 +4,27 @@ import entities.Conta;
 public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
-        var ler = new Scanner(System.in);
-        System.out.println("insira o número da conta: ");
+        Scanner ler = new Scanner(System.in);
+        Conta cliente1;
+        System.out.print("insira o número da conta: ");
         int numeroConta = ler.nextInt();
+        System.out.print("insira o titular da conta: ");
         ler.nextLine();
-        System.out.println("insira o titular da conta: ");
         String nomeConta = ler.nextLine();
 
-        Conta cliente1 = new Conta(numeroConta,nomeConta);
+        System.out.print("existe um deposito inicial(y/n)? ");
+        char respostaDepositoInicial = ler.next().charAt(0);
+        if (respostaDepositoInicial == 'y'){
+            System.out.print("Insira o valor do depósito inicial: ");
+            double depositoInicial = ler.nextDouble();
+            cliente1 = new Conta(numeroConta, nomeConta, depositoInicial);
+        }
+        else {
+            cliente1 = new Conta(numeroConta,nomeConta);
+        }
+
         System.out.println(cliente1);
-        System.out.println("Insira o valor do depósito");
+        System.out.print("Insira o valor do depósito: ");
         double deposito = ler.nextDouble();
         cliente1.deposito(deposito);
         System.out.println("Dados atualizados! \n" + cliente1);

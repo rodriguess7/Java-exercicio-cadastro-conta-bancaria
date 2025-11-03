@@ -41,6 +41,6 @@ public class Conta {
     public String toString() {
         return "Dados da conta \n" +
                 "Conta: " + numeroDaConta + ", " + "Titular: " + nomeTitular +
-                ", " + "Saldo: $ " + getSaldo();
+                ", " + "Saldo: $ " + String.format("%.2f",saldo);
     }
 }
